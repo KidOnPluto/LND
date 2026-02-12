@@ -1,1 +1,126 @@
-<!-- Main frontend page --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LightningFund | Support Open Development</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- QR Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">⚡ LightningFund</div>
+
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Transparency</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>Support Open-Source Bitcoin Development</h1>
+    <p>
+        We build secure, open infrastructure for the Bitcoin Lightning Network.
+        Your donation directly supports development, maintenance, and security improvements.
+    </p>
+</section>
+
+
+<section class="donation-wrapper">
+
+    
+    <div class="goal-section">
+        <h3>Community Funding Goal</h3>
+
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <p>
+            <span id="currentAmount">0</span> sats raised of 
+            <strong>100,000 sats</strong>
+        </p>
+    </div>
+
+    
+    <div class="card">
+        <h2>Make a Lightning Donation</h2>
+
+        <p class="small-text">
+            Payments are processed instantly using the Bitcoin Lightning Network.
+            No intermediaries. No delays.
+        </p>
+
+        <input 
+            type="number" 
+            id="amount" 
+            placeholder="Enter amount (sats)"
+            min="1"
+        />
+
+        <button id="createBtn">
+            Generate Lightning Invoice
+        </button>
+
+        
+        <div id="invoiceSection">
+
+            <h3>Scan to Pay</h3>
+
+            <div id="qrcode"></div>
+
+            <p id="invoiceText"></p>
+
+            <div class="loading" id="status">
+                Waiting for payment confirmation...
+            </div>
+
+            <div class="success" id="successMessage"></div>
+
+        </div>
+    </div>
+
+    
+    <div class="trust">
+        <div>🔒 Secure & Non-Custodial</div>
+        <div>⚡ Instant Settlement</div>
+        <div>🌍 Borderless Payments</div>
+    </div>
+
+</section>
+
+
+<section class="transparency">
+    <h2>Transparency & Accountability</h2>
+    <p>
+        All donations are processed through our public Lightning node.
+        Funding progress is updated automatically once payments settle.
+    </p>
+
+    <ul>
+        <li>✔ Real-time invoice verification</li>
+        <li>✔ No third-party processors</li>
+        <li>✔ Open-source infrastructure</li>
+    </ul>
+</section>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>Powered by Bitcoin Lightning Network ⚡</p>
+        <p>© 2026 LightningFund. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
